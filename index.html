@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Engineer & Agency Master Roadmap</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --accent-green: #2ea043;
+      --accent-orange: #f0883e;
+      --text: #c9d1d9;
+      --text-white: #f0f6fc;
+      --text-muted: #8b949e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px 16px; max-width: 1200px; margin: auto; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 24px; }
+    h1 { color: var(--text-white); font-size: 1.8rem; margin-bottom: 8px; }
+    .status-bar { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 24px; }
+    .progress-container { background: #21262d; border-radius: 6px; height: 12px; overflow: hidden; margin-top: 8px; }
+    .progress-fill { background: var(--accent-green); height: 100%; width: 0%; transition: width 0.3s ease; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+    .card h2 { color: var(--text-white); font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    .badge { display: inline-block; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px; background: #1f6feb22; color: var(--accent); border: 1px solid #1f6feb; }
+    ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; }
+    input[type="checkbox"] { margin-top: 4px; accent-color: var(--accent-green); cursor: pointer; }
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+    .terminal-box { background: #000; border: 1px solid var(--border); border-radius: 6px; padding: 12px; font-family: monospace; font-size: 0.85rem; color: #7ee787; overflow-x: auto; white-space: pre-wrap; }
+    .copy-btn { background: #21262d; border: 1px solid var(--border); color: var(--text-white); padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 0.75rem; align-self: flex-start; }
+    .copy-btn:hover { background: #30363d; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AI Automation & Solutions Architect: 6-Month Launchpad</h1>
+    <p style="color: var(--text-muted);">Self-Hosted Track: Tablet Reference + Mac/PC Sandbox Execution</p>
+  </header>
+
+  <div class="status-bar">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <strong>Total Curriculum Completion</strong>
+      <span id="progress-percent" style="font-weight:bold; color:var(--text-white);">0%</span>
+    </div>
+    <div class="progress-container">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- Month 1 -->
+    <div class="card">
+      <div style="display:flex; justify-content:space-between;">
+        <h2>Month 1: Google GenAI & n8n Wins</h2>
+        <span class="badge">Weeks 1–4</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-muted);">Focus: Free Google certifications, API calls in Colab, and n8n low-code automations.</p>
+      <ul>
+        <li>
+          <input type="checkbox" id="m1-1" onchange="updateProgress()" />
+          <label for="m1-1">Google Cert: <a href="https://www.cloudskillsboost.google/course_templates/536" target="_blank">Intro to Generative AI</a></label>
+        </li>
+        <li>
+          <input type="checkbox" id="m1-2" onchange="updateProgress()" />
+          <label for="m1-2">Google Cert: <a href="https://www.cloudskillsboost.google/course_templates/539" target="_blank">Intro to LLMs</a></label>
+        </li>
+        <li>
+          <input type="checkbox" id="m1-3" onchange="updateProgress()" />
+          <label for="m1-3">Colab Setup: Run first Python JSON API call to Gemini</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m1-4" onchange="updateProgress()" />
+          <label for="m1-4">Workflow: Build automated email/webhook triage in <a href="https://github.com/n8n-io/n8n" target="_blank">n8n</a></label>
+        </li>
+        <li>
+          <input type="checkbox" id="m1-5" onchange="updateProgress()" />
+          <label for="m1-5">Sales: Study Hormozi's Value Equation for AI agency packages</label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Month 2 -->
+    <div class="card">
+      <div style="display:flex; justify-content:space-between;">
+        <h2>Month 2: Tool Calling & APIs</h2>
+        <span class="badge">Weeks 5–8</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-muted);">Focus: Pydantic schemas, function calling, external database integration.</p>
+      <ul>
+        <li>
+          <input type="checkbox" id="m2-1" onchange="updateProgress()" />
+          <label for="m2-1">Skill Badge: Prompt Design in Vertex AI / Gemini Studio</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m2-2" onchange="updateProgress()" />
+          <label for="m2-2">Repo Study: <a href="https://github.com/google-gemini/cookbook" target="_blank">Gemini API Cookbook</a> (Function Calling)</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m2-3" onchange="updateProgress()" />
+          <label for="m2-3">Build: Autonomous CRM lead qualifier using structured JSON output</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m2-4" onchange="updateProgress()" />
+          <label for="m2-4">Sales: Master Belfort's Straight-Line qualification script</label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Month 3 -->
+    <div class="card">
+      <div style="display:flex; justify-content:space-between;">
+        <h2>Month 3: RAG & Vector Knowledge</h2>
+        <span class="badge">Weeks 9–12</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-muted);">Focus: Vector databases, chunking, and document search systems.</p>
+      <ul>
+        <li>
+          <input type="checkbox" id="m3-1" onchange="updateProgress()" />
+          <label for="m3-1">Google Study: Inspect Rich Documents with Multimodal RAG</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m3-2" onchange="updateProgress()" />
+          <label for="m3-2">Theory: Watch 3Blue1Brown Neural Networks & Vector Embeddings</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m3-3" onchange="updateProgress()" />
+          <label for="m3-3">Build: Custom internal knowledge assistant using <a href="https://github.com/run-llama/llama_index" target="_blank">LlamaIndex</a></label>
+        </li>
+        <li>
+          <input type="checkbox" id="m3-4" onchange="updateProgress()" />
+          <label for="m3-4">Sales: Pitching internal search and compliance bots to local firms</label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Month 4 -->
+    <div class="card">
+      <div style="display:flex; justify-content:space-between;">
+        <h2>Month 4: Multi-Agent Architectures</h2>
+        <span class="badge">Weeks 13–16</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-muted);">Focus: LangGraph, CrewAI swarms, production safety guardrails.</p>
+      <ul>
+        <li>
+          <input type="checkbox" id="m4-1" onchange="updateProgress()" />
+          <label for="m4-1">Course: DeepLearning.AI Agentic Systems & Evaluators</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m4-2" onchange="updateProgress()" />
+          <label for="m4-2">Build: Multi-agent planner/worker team using <a href="https://github.com/langchain-ai/langgraph" target="_blank">LangGraph</a></label>
+        </li>
+        <li>
+          <input type="checkbox" id="m4-3" onchange="updateProgress()" />
+          <label for="m4-3">Guardrails: Build regex/canary token filters against prompt injections</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m4-4" onchange="updateProgress()" />
+          <label for="m4-4">Sales: Hormozi $100M Leads (Cold Loom Video Audit Strategy)</label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Month 5 -->
+    <div class="card">
+      <div style="display:flex; justify-content:space-between;">
+        <h2>Month 5: Packaging & Sales AI</h2>
+        <span class="badge">Weeks 17–20</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-muted);">Focus: Building the interactive objection tutor and client packaging.</p>
+      <ul>
+        <li>
+          <input type="checkbox" id="m5-1" onchange="updateProgress()" />
+          <label for="m5-1">Deployment: Package bots into Web UIs (Streamlit/Next.js/FastHTML)</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m5-2" onchange="updateProgress()" />
+          <label for="m5-2">Deploy: Launch systems on Google Cloud Run</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m5-3" onchange="updateProgress()" />
+          <label for="m5-3">Build Capstone: The Sales Call Simulator (Interactive voice/text agent)</label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Month 6 -->
+    <div class="card">
+      <div style="display:flex; justify-content:space-between;">
+        <h2>Month 6: The Capstone & Placements</h2>
+        <span class="badge">Weeks 21–24</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-muted);">Focus: 3 public GitHub repos, live video walkthroughs, agency acquisition.</p>
+      <ul>
+        <li>
+          <input type="checkbox" id="m6-1" onchange="updateProgress()" />
+          <label for="m6-1">Polish 3 GitHub repos with complete documentation and architecture diagrams</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m6-2" onchange="updateProgress()" />
+          <label for="m6-2">Record 3 Loom walkthroughs explaining business ROI and system latency</label>
+        </li>
+        <li>
+          <input type="checkbox" id="m6-3" onchange="updateProgress()" />
+          <label for="m6-3">Interview / Agency Launch: Complete 15 target client audits</label>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Terminal Section -->
+  <div class="card" style="margin-top: 24px;">
+    <h2>Colab Quick-Run: Gemini Structured Tool Calling</h2>
+    <p style="font-size:0.9rem; color:var(--text-muted);">Copy and paste this directly into Google Colab to test your first structured API agent call.</p>
+    <button class="copy-btn" onclick="copySnippet()">Copy Code</button>
+    <div class="terminal-box" id="code-snippet">!pip install -q -U google-genai
+
+from google import genai
+from google.genai import types
+from pydantic import BaseModel, Field
+
+# 1. Define Structured Output Schema
+class LeadQualification(BaseModel):
+    company_name: str
+    decision_maker: bool
+    budget_identified: bool
+    urgency_level: str = Field(description="Low, Medium, or High")
+    primary_pain_point: str
+
+# 2. Client Call (Requires GEMINI_API_KEY in userdata/env)
+client = genai.Client()
+
+prompt = "Prospect: 'Hey, I run a 25-person logistics firm. We are burning 15 hours a week manually entering delivery orders. We have $3,000 set aside to automate this immediately.'"
+
+response = client.models.generate_content(
+    model='gemini-2.5-flash',
+    contents=prompt,
+    config=types.GenerateContentConfig(
+        response_mime_type="application/json",
+        response_schema=LeadQualification,
+    ),
+)
+
+print(response.text)</div>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+    function updateProgress() {
+      const total = checkboxes.length;
+      let checked = 0;
+      checkboxes.forEach(box => {
+        if (box.checked) checked++;
+        localStorage.setItem(box.id, box.checked);
+      });
+      const pct = Math.round((checked / total) * 100);
+      document.getElementById('progress-percent').innerText = pct + '%';
+      document.getElementById('progress-fill').style.width = pct + '%';
+    }
+
+    function loadProgress() {
+      checkboxes.forEach(box => {
+        const saved = localStorage.getItem(box.id);
+        if (saved === 'true') {
+          box.checked = true;
+        }
+      });
+      updateProgress();
+    }
+
+    function copySnippet() {
+      const code = document.getElementById('code-snippet').innerText;
+      navigator.clipboard.writeText(code);
+      alert('Code copied! Paste directly into your Google Colab cell.');
+    }
+
+    loadProgress();
+  </script>
+</body>
+</html>
